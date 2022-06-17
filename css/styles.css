@@ -3,6 +3,13 @@
   --clr: #ffffff;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   height: 100vh;
   font-size: 16px;
@@ -31,27 +38,82 @@ body {
 }
 
 .nav {
+  --pd-vert: 2rem;
+  --pd-horz: 4rem;
+  --ind-clr: #29fd53;
+  --height: 7rem;
+  position: relative;
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 2rem 4rem;
+  min-height: var(--height);
+  padding: 0 var(--pd-horz);
   background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .nav__list {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(auto, 1fr))[var];
+      grid-template-columns: repeat(var(--quantity), minmax(auto, 1fr));
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+.nav__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .nav__link {
-  padding: 0.7rem 1.4rem;
+  position: relative;
+  z-index: 2;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: var(--pd-vert) 1.4rem;
   color: var(--bg-clr);
   text-decoration: none;
+}
+
+.nav__link:hover .nav__link-icon {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.nav__link-icon {
+  position: absolute;
+  top: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+}
+
+.nav__indicator {
+  position: absolute;
+  bottom: 50%;
+  left: var(--pd-horz);
+  width: calc((100% - var(--pd-horz) * 2) / var(--quantity));
+  aspect-ratio: 1 / 1;
+  background: var(--ind-clr);
+  border-radius: 50%;
 }
 /*# sourceMappingURL=styles.css.map */
