@@ -1,0 +1,9 @@
+:root {
+  --bg-clr: #222327;
+}
+
+body {
+  background: var(--bg-clr);
+}
+
+@import './modules/nav';
