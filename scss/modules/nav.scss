@@ -1,8 +1,12 @@
 .nav {
+  --height: 7rem;
   --pd-vert: 2rem;
   --pd-horz: 4rem;
+  --icon-sz: 2rem;
   --ind-clr: #29fd53;
-  --height: 7rem;
+  --trs-dur: 0.5s;
+  --trs-fnc: ease-in;
+  --trs: var(--trs-dur) var(--trs-fnc);
   position: relative;
   align-self: center;
   display: inline-flex;
@@ -10,10 +14,11 @@
   padding: 0 var(--pd-horz);
   background-color: #ffffff;
   border-radius: 10px;
+  user-select: none;
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(var(--quantity), minmax(auto, 1fr));
+    grid-template-columns: repeat(var(--quantity), minmax(var(--icon-sz), 1fr));
     list-style: none;
     padding: 0;
     margin: 0;
@@ -28,6 +33,7 @@
     z-index: 2;
     display: inline-flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: var(--pd-vert) 1.4rem;
@@ -36,17 +42,31 @@
 
     &:hover {
       .nav__link-icon {
-        transform: translateY(-50%);
+        transform: translateY(calc((var(--height) / 2 + var(--icon-sz) / 2) * -1));
+      }
+
+      .nav__link-text {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(100%);
       }
     }
   }
 
   &__link-icon {
     position: absolute;
-    top: 0;
+    top: 50%;
     display: inline-flex;
-    font-size: 2rem;
-    transition: transform 0.5s ease-in;
+    font-size: var(--icon-sz);
+    transform: translateY(-50%);
+    transition: transform var(--trs);
+  }
+
+  &__link-text {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(200%);
+    transition: transform var(--trs), visibility var(--trs), opacity var(--trs);
   }
 
   &__indicator {
