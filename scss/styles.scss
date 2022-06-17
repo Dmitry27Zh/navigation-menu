@@ -1,5 +1,5 @@
 :root {
-  --bg-clr: #222327;
+  --pg-bg-clr: #222327;
   --clr: #ffffff;
 }
 
@@ -19,7 +19,7 @@ body {
   margin: 0;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   color: var(--clr);
-  background: var(--bg-clr);
+  background: var(--pg-bg-clr);
 }
 
 .wrapper {
@@ -27,6 +27,15 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 767px) {
+    padding: 0 10px;
+  }
 }
 
 @import './modules/nav';
