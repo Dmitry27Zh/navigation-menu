@@ -38,6 +38,18 @@
 
   &__item {
     display: inline-flex;
+
+    &.active {
+      .nav__link-icon {
+        transform: translateY(calc((var(--height) / 2 + var(--icon-sz) / 2) * -1));
+      }
+
+      .nav__link-text {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(calc(var(--height) / 4));
+      }
+    }
   }
 
   &__link {
@@ -51,18 +63,6 @@
     padding: var(--pd-vert) 1.4rem;
     color: var(--pg-bg-clr);
     text-decoration: none;
-
-    &:hover {
-      .nav__link-icon {
-        transform: translateY(calc((var(--height) / 2 + var(--icon-sz) / 2) * -1));
-      }
-
-      .nav__link-text {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(calc(var(--height) / 4));
-      }
-    }
   }
 
   &__link-icon {
