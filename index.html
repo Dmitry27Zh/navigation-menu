@@ -5,19 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <div class="wrapper">
       <nav class="nav">
         <ul class="nav__list">
-          <li><a href="#" class="nav__link">Home</a></li>
-          <li><a href="#" class="nav__link">Profile</a></li>
-          <li><a href="#" class="nav__link">Message</a></li>
-          <li><a href="#" class="nav__link">Photos</a></li>
-          <li><a href="#" class="nav__link">Settings</a></li>
+          <li>
+            <a class="nav__link" href="#">
+              <span class="nav__link-icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="nav__link-text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__link" href="#">
+              <span class="nav__link-icon">
+                <ion-icon name="person-outline"></ion-icon>
+              </span>
+              <span class="nav__link-text">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__link" href="#">
+              <span class="nav__link-icon">
+                <ion-icon name="chatbox-outline"></ion-icon>
+              </span>
+              <span class="nav__link-text">Message</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__link" href="#">
+              <span class="nav__link-icon">
+                <ion-icon name="camera-outline"></ion-icon>
+              </span>
+              <span class="nav__link-text">Photos</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__link" href="#">
+              <span class="nav__link-icon">
+                <ion-icon name="settings-outline"></ion-icon>
+              </span>
+              <span class="nav__link-text">Settings</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

@@ -5,11 +5,13 @@
 
 html {
   height: 100vh;
+  font-size: 16px;
 }
 
 body {
   height: 100%;
   margin: 0;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   color: var(--clr);
   background: var(--bg-clr);
 }
@@ -29,6 +31,27 @@ body {
 }
 
 .nav {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 2rem 4rem;
   background-color: #ffffff;
+}
+
+.nav__list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  padding: 0.7rem 1.4rem;
+  color: var(--bg-clr);
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */

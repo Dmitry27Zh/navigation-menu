@@ -1,4 +1,25 @@
 .nav {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 2rem 4rem;
   background-color: #ffffff;
+}
+
+.nav__list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  padding: 0.7rem 1.4rem;
+  color: var(--bg-clr);
+  text-decoration: none;
 }
 /*# sourceMappingURL=nav.css.map */
