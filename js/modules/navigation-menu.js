@@ -3,12 +3,13 @@ export const initNavigationMenu = (el = document.querySelector('.nav')) => {
     const items = [...el.querySelectorAll('.nav__item')]
     let activeItem = items.find((item) => item.matches('.active'))
 
-    items.forEach((item) => {
+    items.forEach((item, index) => {
       item.addEventListener('click', function() {
         if (this != activeItem) {
           activeItem.classList.remove('active')
           this.classList.add('active')
           activeItem = this
+          el.style.setProperty('--active', index)
         }
       })
     })

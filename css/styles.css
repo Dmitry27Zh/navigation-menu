@@ -168,12 +168,14 @@ body {
   --item-width: calc(100% - var(--pd-horz) * 2) / var(--quantity);
   position: absolute;
   bottom: 50%;
-  left: calc(var(--pd-horz) + (var(--item-width) - var(--height)) / 2);
+  left: calc(var(--pd-horz) + (var(--item-width) - var(--height)) / 2 + var(--item-width) * var(--active));
   width: var(--height);
   aspect-ratio: 1 / 1;
   border: var(--ind-br-width) solid var(--pg-bg-clr);
   background: var(--ind-clr);
   border-radius: 50%;
+  -webkit-transition: left var(--trs);
+  transition: left var(--trs);
 }
 
 .nav__indicator::before, .nav__indicator::after {
