@@ -1,4 +1,6 @@
-:root {
+:root,
+*::before,
+*::after {
   --pg-bg-clr: #222327;
   --clr: #ffffff;
 }
@@ -16,6 +18,7 @@ html {
 
 body {
   height: 100%;
+  min-width: 320px;
   margin: 0;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   color: var(--clr);
