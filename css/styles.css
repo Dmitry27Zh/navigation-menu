@@ -217,8 +217,8 @@ body {
   max-width: var(--pd-item-horz);
   aspect-ratio: 1/1;
   background-color: var(--bg-clr);
-  -webkit-box-shadow: 0px -8px 0 0 var(--pg-bg-clr);
-          box-shadow: 0px -8px 0 0 var(--pg-bg-clr);
+  -webkit-box-shadow: -2px -8px 0 0 var(--pg-bg-clr);
+          box-shadow: -2px -8px 0 0 var(--pg-bg-clr);
   content: "";
 }
 @media (max-width: 639px) {
@@ -230,6 +230,8 @@ body {
 .nav__indicator::before {
   right: calc(100% + var(--ind-br-width) / 2);
   border-top-right-radius: 100%;
+  -webkit-box-shadow: 2px -8px 0 0 var(--pg-bg-clr);
+          box-shadow: 2px -8px 0 0 var(--pg-bg-clr);
 }
 @media (max-width: 639px) {
   .nav__indicator::before {
